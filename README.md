@@ -16,5 +16,6 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 # how it works
-this is a basic Weather app that fetches data from the open weather map API
-it shows the real time weather of the place that you are
+- this is a basic Weather app that fetches data from the open weather map API
+- it shows the real time weather of the place that you are
+- clone the rep to your computer, then perform 'flutter run' in your terminal to get it working
