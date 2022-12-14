@@ -40,6 +40,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import { useState } from "react";
 import "./index.css";
+import prof from '../src/images/breakermaximus03.jpg';
 
 const App = () => {
   const [firstName, setFirstName] = useState("");
@@ -74,50 +75,68 @@ const App = () => {
     console.log(confirmPass);
   };
   return (
-    <div className="font-bold flex flex-row gap-4 m-3">
-      <div className="w-1/2 ">
-        <h1 className="text-center pt-2">ACME</h1>
-        <img src=""></img>
+    <div className="font-bold flex flex-row gap-4 m-4 bg-gray-500 rounded-md">
+      <div className="w-1/2">
+        <h1 className="text-center pt-8">ACME</h1>
+        <img src={prof} alt="prof" className="pl-4 pr-4 rounded-md"/>
       </div>
-      <div className="flex flex-col w-1/2 gap-12 pt-4">
-        <form className="flex flex-col gap-12 ">
-          <label className="pr-2">
+      <div className="flex flex-col w-1/2 gap-12 pt-4 ">
+        <form className="flex flex-col gap-4 ">
+          <label className="pr-2 flex flex-col relative block">
             FIRST NAME
             <input
-              className="border"
+              className="border mt-2 mr-80 h-8 rounded-md placeholder:text-slate-400"
               type="text"
               name="FIRST NAME"
               value={firstName}
               spaceholder="Jane"
+              
               onChange={handleFChange}
             />
           </label>
 
-          <label>
+          <label className="pr-2 flex flex-col">
             SECOND NAME
             <input
+              className="border mt-2 mr-80 h-8 rounded-md"
               label="SECOND NAME"
               spaceholder="Jane"
               onChange={handleSChange}
             />
           </label>
 
-          <label>
+          <label className="pr-2 flex flex-col">
             PHONE
-            <input label="PHONE" spaceholder="Jane" onChange={handlePhone} />
-          </label>
-          <label>
+            <input
+              className="border mt-2 mr-80 h-8 rounded-md"
+              label="PHONE"
+              spaceholder="Jane"
+              onChange={handlePhone}
+            />
+          </label >
+          <label className="pr-2 flex flex-col">
             EMAIL
-            <input label="EMAIL" spaceholder="Jane" onChange={handleEmail} />
+            <input
+              className="border mt-2 mr-80 h-8 rounded-md"
+              label="EMAIL"
+              spaceholder="Jane"
+              onChange={handleEmail}
+            />
           </label>
 
-          <label>
+          <label className="pr-2 flex flex-col">
             PASSWORD
-            <input label="PASSWORD" spaceholder="Jane" onChange={handlePass} />
+            <input
+              className="border mt-2 mr-80 h-8 rounded-md"
+              label="PASSWORD"
+              spaceholder="Jane"
+              onChange={handlePass}
+            />
           </label>
-          <label>
+          <label className=" flex flex-col">
             CONFIRM PASSWORD
             <input
+              className="border mt-2 mr-80 h-8 rounded-md"
               label="FIRST NAME"
               spaceholder="Jane"
               onChange={handleConfirmPass}
@@ -133,7 +152,7 @@ const App = () => {
             control={<Checkbox />}
             label="I want to receive news"
           />
-          <button class="mt-8 mr-80 bg-gray-900 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+          <button className="m-3 mr-80 bg-gray-900 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
             SIGN UP
           </button>
         </div>
