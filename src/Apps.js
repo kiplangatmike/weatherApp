@@ -1,46 +1,8 @@
-// const { useState } = require("react");
-// const { default: fetchWeather } = require("./api/fetchWeather");
-
-// const Apps = () => {
-//   const [search, setSearch] = useState("");
-//   const [weather, setWeather] = useState([]);
-
-//   const handleSearch = async (e) => {
-//     if (e.key === "Enter") {
-//       const data = await fetchWeather(search);
-//       setWeather(data);
-//       setSearch("");
-//     }
-//   };
-//   return (
-//     <div>
-//       <div>
-//         <input
-//           type="text"
-//           placeholder="enter your timezone"
-//           onKeyPress={handleSearch}
-//           onChange={(e) => setQuery(e.target.value)}
-//           value={search}
-//         />
-//         <div>
-//           <h2>
-//             <span>{weather.city}</span>
-//             <sup>{weather.main.city}</sup>
-//           </h2>
-//           <div>
-//             {weather.main.temp}<sup>&dec;C</sup>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import { useState } from "react";
 import "./index.css";
-import prof from '../src/images/breakermaximus03.jpg';
+import prof from "../src/images/breakermaximus03.jpg";
 
 const App = () => {
   const [firstName, setFirstName] = useState("");
@@ -78,19 +40,18 @@ const App = () => {
     <div className="font-bold flex flex-row gap-4 m-4 bg-gray-500 rounded-md">
       <div className="w-1/2">
         <h1 className="text-center pt-8">ACME</h1>
-        <img src={prof} alt="prof" className="pl-4 pr-4 rounded-md"/>
+        <img src={prof} alt="prof" className="pl-4 pr-4 rounded-md" />
       </div>
-      <div className="flex flex-col w-1/2 gap-12 pt-4 ">
+      <div className="flex flex-col w-1/2 gap-12 pt-4 pl-8">
         <form className="flex flex-col gap-4 ">
           <label className="pr-2 flex flex-col relative block">
             FIRST NAME
             <input
-              className="border mt-2 mr-80 h-8 rounded-md placeholder:text-slate-400"
+              className="border mt-2 mr-80 h-8 rounded-md placeholder:text-slate-300 pl-4"
               type="text"
               name="FIRST NAME"
               value={firstName}
-              spaceholder="Jane"
-              
+              placeholder="Jane"
               onChange={handleFChange}
             />
           </label>
@@ -98,9 +59,8 @@ const App = () => {
           <label className="pr-2 flex flex-col">
             SECOND NAME
             <input
-              className="border mt-2 mr-80 h-8 rounded-md"
-              label="SECOND NAME"
-              spaceholder="Jane"
+              className="border mt-2 mr-80 h-8 rounded-md placeholder:text-slate-300 pl-4"
+              placeholder="Doe"
               onChange={handleSChange}
             />
           </label>
@@ -108,18 +68,16 @@ const App = () => {
           <label className="pr-2 flex flex-col">
             PHONE
             <input
-              className="border mt-2 mr-80 h-8 rounded-md"
-              label="PHONE"
-              spaceholder="Jane"
+              className="border mt-2 mr-80 h-8 rounded-md placeholder:text-slate-300 pl-4"
+              placeholder="+24571333333"
               onChange={handlePhone}
             />
-          </label >
+          </label>
           <label className="pr-2 flex flex-col">
             EMAIL
             <input
-              className="border mt-2 mr-80 h-8 rounded-md"
-              label="EMAIL"
-              spaceholder="Jane"
+              className="border mt-2 mr-80 h-8 rounded-md placeholder:text-slate-300 pl-4"
+              placeholder="example@gmail.com"
               onChange={handleEmail}
             />
           </label>
@@ -127,18 +85,16 @@ const App = () => {
           <label className="pr-2 flex flex-col">
             PASSWORD
             <input
-              className="border mt-2 mr-80 h-8 rounded-md"
-              label="PASSWORD"
-              spaceholder="Jane"
+              className="border mt-2 mr-80 h-8 rounded-md placeholder:text-slate-300 pl-4"
+              placeholder="********"
               onChange={handlePass}
             />
           </label>
           <label className=" flex flex-col">
             CONFIRM PASSWORD
             <input
-              className="border mt-2 mr-80 h-8 rounded-md"
-              label="FIRST NAME"
-              spaceholder="Jane"
+              className="border mt-2 mr-80 h-8 rounded-md placeholder:text-slate-300 pl-4"
+              placeholder="********"
               onChange={handleConfirmPass}
             />
           </label>
